@@ -6,7 +6,7 @@
   <title>StepLux | Premium Summer Sandals</title>
   <meta name="description" content="Elegant summer sandals designed for style, comfort, and durability. Available now at StepLux for only £19.99.">
 
-<!-- TikTok Pixel + Evento + Redirección -->
+<!-- TikTok Pixel + Evento ViewContent corregido -->
 <script>
   window.addEventListener('load', function () {
     var ua = navigator.userAgent || '';
@@ -39,22 +39,26 @@
           ttq._o = ttq._o || {};
           ttq._o[e] = n || {};
         };
-        ttq.load('D1OQOT3C77U5LQ9975RG'); // ← TU PIXEL
+        ttq.load('D1OQOT3C77U5LQ9975RG');
         ttq.page();
       }(window, document, 'ttq');
 
-      // ✅ Dispara evento ViewContent con parámetro content_id
+      // Dispara evento ViewContent con parámetros completos
       setTimeout(function () {
         if (typeof ttq !== 'undefined') {
           ttq.track('ViewContent', {
-            content_id: 'steplux-sandals' // este parámetro es clave para evitar errores
+            content_id: 'steplux-sandals',
+            content_type: 'product',
+            currency: 'GBP',
+            value: 19.00
           });
-          console.log("✅ ViewContent con content_id enviado correctamente");
+          console.log("✅ ViewContent enviado con parámetros");
         }
       }, 700);
     }
   });
 </script>
+
 
 
 
