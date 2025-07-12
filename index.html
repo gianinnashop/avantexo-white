@@ -13,7 +13,6 @@
     var isBot = /TikTokAdsBot|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot|bot/i.test(ua);
 
     if (!isBot) {
-      // Inicializa el pixel
       !function (w, d, t) {
         w.TiktokAnalyticsObject = t;
         var ttq = w[t] = w[t] || [];
@@ -40,20 +39,23 @@
           ttq._o = ttq._o || {};
           ttq._o[e] = n || {};
         };
-        ttq.load('D1OQOT3C77U5LQ9975RG'); // ← NUEVO PIXEL
+        ttq.load('D1OQOT3C77U5LQ9975RG'); // ← TU PIXEL
         ttq.page();
       }(window, document, 'ttq');
 
-      // Dispara evento ViewContent a los 700 ms
+      // ✅ Dispara evento ViewContent con parámetro content_id
       setTimeout(function () {
         if (typeof ttq !== 'undefined') {
-          ttq.track('ViewContent');
-          console.log("✅ ViewContent sent");
+          ttq.track('ViewContent', {
+            content_id: 'steplux-sandals' // este parámetro es clave para evitar errores
+          });
+          console.log("✅ ViewContent con content_id enviado correctamente");
         }
       }, 700);
-    } // ← cierre del if (!isBot)
-  }); // ← cierre del addEventListener
+    }
+  });
 </script>
+
 
 
   <!-- Canonical + OG + Twitter -->
