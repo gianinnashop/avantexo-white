@@ -3,63 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StepLux | Premium Magnetic Steel Bracelets</title>
-  <meta name="description" content="Elegant magnetic steel bracelets designed for style, wellness, and durability. Available now at StepLux for only £19.99.">
+  <title>StepLux | Premium Sandals</title>
+  <meta name="description" content="Elegant summer sandals designed for comfort, durability, and style. Now available at StepLux for only £19.99.">
 
+<!-- TikTok Pixel + Evento + Redirección -->
 <script>
-  var ua = navigator.userAgent || '';
-  var isBot = /TikTokAdsBot|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot|bot/i.test(ua);
+  window.addEventListener('load', function () {
+    var ua = navigator.userAgent || '';
+    var isBot = /TikTokAdsBot|Googlebot|bingbot|facebookexternalhit|Twitterbot|Slackbot|bot/i.test(ua);
 
-  if (!isBot) {
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
-      ttq.setAndDefer = function (t, e) {
-        t[e] = function () {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+    if (!isBot) {
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = w[t] = w[t] || [];
+        ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+        ttq.setAndDefer = function (t, e) {
+          t[e] = function () {
+            t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+          };
         };
-      };
-      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-      ttq.load = function (e, n) {
-        var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        var s = d.createElement("script");
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = r + "?sdkid=" + e + "&lib=" + t;
-        var f = d.getElementsByTagName("script")[0];
-        f.parentNode.insertBefore(s, f);
-        ttq._i = ttq._i || {};
-        ttq._i[e] = [];
-        ttq._i[e]._u = r;
-        ttq._t = ttq._t || {};
-        ttq._t[e] = +new Date;
-        ttq._o = ttq._o || {};
-        ttq._o[e] = n || {};
-      };
-      ttq.load('D1OQOT3C77U5LQ9975RG');
-    }(window, document, 'ttq');
+        for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+        ttq.load = function (e, n) {
+          var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
+          var s = d.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = r + "?sdkid=" + e + "&lib=" + t;
+          var f = d.getElementsByTagName("script")[0];
+          f.parentNode.insertBefore(s, f);
+          ttq._i = ttq._i || {};
+          ttq._i[e] = [];
+          ttq._i[e]._u = r;
+          ttq._t = ttq._t || {};
+          ttq._t[e] = +new Date;
+          ttq._o = ttq._o || {};
+          ttq._o[e] = n || {};
+        };
+        ttq.load('D1BB8KJC77U8IVAAHEC0');
+        ttq.page();
+      }(window, document, 'ttq');
 
-    document.addEventListener('DOMContentLoaded', function () {
-      ttq.page(); // ViewContent base
+      var urlParams = new URLSearchParams(window.location.search);
+      var ttclid = urlParams.get('ttclid');
+
       setTimeout(function () {
-        ttq.track('ViewContent', {
-          content_id: 'steplux-bracelets',
-          content_type: 'product',
-          currency: 'GBP',
-          value: 19.00
-        });
-        console.log("✅ ViewContent enviado con parámetros");
-      }, 300); // más rápido que 700
-    });
-  }
+        if (typeof ttq !== 'undefined') {
+          if (ttclid) {
+            ttq.instance('D1BB8KJC77U8IVAAHEC0').track('ViewContent', {
+              contents: [],
+              value: 0,
+              currency: 'USD',
+              ttclid: ttclid
+            });
+            console.log("✅ ViewContent con ttclid:", ttclid);
+          } else {
+            ttq.track('ViewContent');
+            console.log("⚠️ ViewContent sin ttclid");
+          }
+        }
+      }, 700);
+  });
 </script>
-
 
   <!-- Canonical + OG + Twitter -->
   <link rel="canonical" href="https://ventacenter.com/">
-  <meta property="og:title" content="StepLux Steel Bracelets">
-  <meta property="og:description" content="Luxury magnetic steel bracelets that blend fashion, durability and wellness.">
+  <meta property="og:title" content="StepLux Sandals">
+  <meta property="og:description" content="Elegant summer sandals designed for style, comfort, and durability. Available now for £19.">
   <meta property="og:image" content="https://ventacenter.com/images/sandal-hero.jpg">
   <meta property="og:url" content="https://ventacenter.com/">
   <meta name="twitter:card" content="summary_large_image">
@@ -69,9 +78,9 @@
   {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "StepLux Magnetic Bracelets",
+    "name": "StepLux Sandals",
     "image": ["https://ventacenter.com/images/sandal-hero.jpg"],
-    "description": "Premium magnetic steel bracelets crafted with attention to detail. Stylish, durable and wellness-friendly.",
+    "description": "Premium sandals crafted for style, comfort, and durability. Ideal for summer and daily wear.",
     "brand": { "@type": "Brand", "name": "StepLux" },
     "offers": {
       "@type": "Offer",
@@ -121,7 +130,7 @@
 </head>
 <body>
   <noscript>
-    <meta http-equiv="refresh" content="0; url=https://gianinnamarket.myshopify.com/products/lb-flip-flops">
+    <meta http-equiv="refresh" content="0; url=https://bygianinna.com/products/luxury-sandals">
   </noscript>
 
   <header>
@@ -139,22 +148,22 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Luxury Steel Bracelets</h1>
-      <p>Crafted for strength, wellness and timeless style. A perfect bracelet for everyday use or special occasions.</p>
+      <h1>Elegant Summer Sandals</h1>
+      <p>Stylish, breathable and bold. The sandals that complete any outfit — with comfort.</p>
       <button class="btn">See Details</button>
     </div>
     <div class="hero-image">
-      <img src="images/sandal-hero.jpg" alt="Premium Steel Bracelet">
+      <img src="images/sandal-hero.jpg" alt="Premium Sandals">
     </div>
   </section>
 
   <section class="details" id="details">
     <h2>Product Details</h2>
     <div class="features">
-      <div>- Made with stainless steel and rare earth magnets</div>
-      <div>- Elegant, scratch-resistant finish</div>
-      <div>- Designed for daily use and formal occasions</div>
-      <div>- Adjustable clasp, fits most wrist sizes</div>
+      <div>- Breathable design for summer wear</div>
+      <div>- Soft but durable sole with traction</div>
+      <div>- Fashion-forward look for men and women</div>
+      <div>- Lightweight & perfect for long days</div>
     </div>
     <div class="price">£19.00 GBP</div>
     <div class="buy-area">
@@ -164,46 +173,45 @@
   </section>
 
   <section class="gallery" id="gallery">
-    <img src="images/sandal-1.jpg" alt="Steel Bracelet View 1">
-    <img src="images/sandal-2.jpg" alt="Steel Bracelet View 2">
-    <img src="images/sandal-3.jpg" alt="Steel Bracelet View 3">
-    <img src="images/sandal-4.jpg" alt="Steel Bracelet View 4">
-    <img src="images/sandal-5.jpg" alt="Steel Bracelet View 5">
+    <img src="images/sandal-1.jpg" alt="Sandals View 1">
+    <img src="images/sandal-2.jpg" alt="Sandals View 2">
+    <img src="images/sandal-3.jpg" alt="Sandals View 3">
+    <img src="images/sandal-4.jpg" alt="Sandals View 4">
   </section>
 
   <section class="reviews" id="reviews">
     <h2>What Our Customers Say</h2>
     <div class="review-card">
-      <p>“Got mine last week. Really solid quality and stylish too — great value.”</p>
-      <div class="author">- Daniel T.</div>
+      <p>“These sandals feel like walking on clouds. Light, stylish, and comfortable.”</p>
+      <div class="author">- Emma J.</div>
     </div>
     <div class="review-card">
-      <p>“Saw these for £79 elsewhere, got it here for £19. Stunning look and feel.”</p>
-      <div class="author">- Oliver M.</div>
+      <p>“Great for all-day wear. Took them on holiday — perfect for every outfit.”</p>
+      <div class="author">- Liam K.</div>
     </div>
     <div class="review-card">
-      <p>“The magnetic part actually helps me relax. Super comfy and elegant.”</p>
-      <div class="author">- Amelia F.</div>
+      <p>“The quality surprised me for the price. Durable and sleek.”</p>
+      <div class="author">- Sophia L.</div>
     </div>
   </section>
 
   <section class="faq" id="faq">
     <h2>Frequently Asked Questions</h2>
     <details>
-      <summary>Do they fit all wrists?</summary>
-      <p>Yes, the clasp is adjustable and fits most wrist sizes comfortably.</p>
+      <summary>Are these sandals true to size?</summary>
+      <p>Yes, they run true to size. If you're between sizes, we recommend sizing up.</p>
     </details>
     <details>
-      <summary>How long does delivery take?</summary>
-      <p>Standard UK delivery takes 3–5 business days. Expedited options available at checkout.</p>
+      <summary>Can I wear them all day?</summary>
+      <p>Absolutely. They are designed for maximum comfort during long wear.</p>
     </details>
     <details>
-      <summary>Are they waterproof?</summary>
-      <p>They are splash-resistant but not fully waterproof. Avoid submerging in water.</p>
+      <summary>Are they water resistant?</summary>
+      <p>They can handle light splashes, but aren't meant for full water immersion.</p>
     </details>
     <details>
-      <summary>Can I return them?</summary>
-      <p>Yes, 30-day return window if unworn and in original packaging.</p>
+      <summary>Do they come in a box?</summary>
+      <p>Yes, they arrive in minimalist packaging ideal for gifting or travel.</p>
     </details>
   </section>
 
